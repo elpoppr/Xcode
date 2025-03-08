@@ -30,14 +30,14 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
     const newPassword = document.getElementById('newPassword').value.trim();
 
     if (users.some(user => user.username === newUsername)) {
-        showError('ÇÓã ÇáãÓÊÎÏã ãæÌæÏ ãÓÈÞðÇ!', 'registerForm');
+        showError('Ø§Ø³Ù… Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…ÙˆØ¬ÙˆØ¯ Ù…Ø³Ø¨Ù‚Ù‹Ø§!', 'registerForm');
         return;
     }
 
     users.push({ username: newUsername, password: newPassword });
     localStorage.setItem('users', JSON.stringify(users));
     
-    showSuccess('Êã ÅäÔÇÁ ÇáÍÓÇÈ ÈäÌÇÍ!', 'registerForm');
+    showSuccess('ØªÙ… Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„Ø­Ø³Ø§Ø¨ Ø¨Ù†Ø¬Ø§Ø­!', 'registerForm');
     document.getElementById('registerForm').reset();
 });
 
@@ -58,14 +58,14 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const user = users.find(u => u.username === username && u.password === password);
     
     if (!user) {
-        showError('ÈíÇäÇÊ ÇáÏÎæá ÛíÑ ÕÍíÍÉ!', 'loginForm');
+        showError('Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¯Ø®ÙˆÙ„ ØºÙŠØ± ØµØ­ÙŠØ­Ø©!', 'loginForm');
         spinner.style.display = 'none';
         submitButton.disabled = false;
         return;
     }
 
     spinner.style.display = 'none';
-    submitButton.innerHTML = 'Êã ÇáÏÎæá ÈäÌÇÍ ?';
+    submitButton.innerHTML = 'ØªÙ… Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ù†Ø¬Ø§Ø­ ?';
     await new Promise(resolve => setTimeout(resolve, 1000));
     window.location.href = 'home.html';
 });
