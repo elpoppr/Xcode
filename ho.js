@@ -1,4 +1,4 @@
-// ÏÇáÉ áÊÍãíá ÇáãäÔæÑÇÊ ãä localStorage
+// Ø¯Ø§Ù„Ø© Ù„ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ù…Ù†Ø´ÙˆØ±Ø§Øª Ù…Ù† localStorage
 function loadPosts() {
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
     const postList = document.getElementById('postList');
@@ -10,16 +10,16 @@ function loadPosts() {
     });
 }
 
-// ÏÇáÉ áÅäÔÇÁ ÚäÕÑ ãäÔæÑ
+// Ø¯Ø§Ù„Ø© Ù„Ø¥Ù†Ø´Ø§Ø¡ Ø¹Ù†ØµØ± Ù…Ù†Ø´ÙˆØ±
 function createPostElement(post) {
     const postDiv = document.createElement('div');
     postDiv.classList.add('post');
     postDiv.setAttribute('data-id', post.id);
     
-    // ãÍÊæì ÇáãäÔæÑ
+    // Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ù…Ù†Ø´ÙˆØ±
     let mediaContent = '';
     if (post.mediaType === 'image') {
-        mediaContent = `<img src="${post.mediaData}" alt="ÕæÑÉ ÇáãäÔæÑ">`;
+        mediaContent = `<img src="${post.mediaData}" alt="ØµÙˆØ±Ø© Ø§Ù„Ù…Ù†Ø´ÙˆØ±">`;
     } else if (post.mediaType === 'video') {
         mediaContent = `<video controls><source src="${post.mediaData}"></video>`;
     }
@@ -28,12 +28,12 @@ function createPostElement(post) {
         <p>${post.text}</p>
         ${mediaContent}
         <small>${new Date(post.timestamp).toLocaleString()}</small>
-        <button class="deleteBtn">ÍĞİ</button>
+        <button class="deleteBtn">Ø­Ø°Ù</button>
     `;
     
-    // ÍÏË ÍĞİ ÇáãäÔæÑ
+    // Ø­Ø¯Ø« Ø­Ø°Ù Ø§Ù„Ù…Ù†Ø´ÙˆØ±
     postDiv.querySelector('.deleteBtn').addEventListener('click', () => {
-        if (confirm('åá ÊÑíÏ ÍĞİ åĞÇ ÇáãäÔæÑ¿')) {
+        if (confirm('Ù‡Ù„ ØªØ±ÙŠØ¯ Ø­Ø°Ù Ù‡Ø°Ø§ Ø§Ù„Ù…Ù†Ø´ÙˆØ±ØŸ')) {
             const posts = JSON.parse(localStorage.getItem('posts')) || [];
             const updatedPosts = posts.filter(p => p.id !== post.id);
             localStorage.setItem('posts', JSON.stringify(updatedPosts));
@@ -44,18 +44,18 @@ function createPostElement(post) {
     return postDiv;
 }
 
-// ÍÏË ÒÑ ÇáäÔÑ
+// Ø­Ø¯Ø« Ø²Ø± Ø§Ù„Ù†Ø´Ø±
 document.getElementById('postButton').addEventListener('click', function() {
     const postContent = document.getElementById('postContent').value.trim();
     const mediaInput = document.getElementById('mediaInput');
     const file = mediaInput.files[0];
     
     if (!postContent && !file) {
-        alert('?? ÇáÑÌÇÁ ÅÏÎÇá äÕ Ãæ ãáİ!');
+        alert('?? Ø§Ù„Ø±Ø¬Ø§Ø¡ Ø¥Ø¯Ø®Ø§Ù„ Ù†Øµ Ø£Ùˆ Ù…Ù„Ù!');
         return;
     }
     
-    // ŞÑÇÁÉ Çáãáİ ÅĞÇ æÌÏ
+    // Ù‚Ø±Ø§Ø¡Ø© Ø§Ù„Ù…Ù„Ù Ø¥Ø°Ø§ ÙˆØ¬Ø¯
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
@@ -68,7 +68,7 @@ document.getElementById('postButton').addEventListener('click', function() {
     }
 });
 
-// ÏÇáÉ áÍİÙ ÇáãäÔæÑ
+// Ø¯Ø§Ù„Ø© Ù„Ø­ÙØ¸ Ø§Ù„Ù…Ù†Ø´ÙˆØ±
 function savePost(text, mediaType = null, mediaData = null) {
     const post = {
         id: Date.now(),
@@ -85,13 +85,13 @@ function savePost(text, mediaType = null, mediaData = null) {
     const postList = document.getElementById('postList');
     postList.prepend(createPostElement(post));
     
-    // ÅÚÇÏÉ ÊÚííä ÇáÍŞæá
+    // Ø¥Ø¹Ø§Ø¯Ø© ØªØ¹ÙŠÙŠÙ† Ø§Ù„Ø­Ù‚ÙˆÙ„
     document.getElementById('postContent').value = '';
     document.getElementById('mediaInput').value = '';
 }
 
-// ÊÍãíá ÇáãäÔæÑÇÊ ÚäÏ İÊÍ ÇáÕİÍÉ
+// ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ù…Ù†Ø´ÙˆØ±Ø§Øª Ø¹Ù†Ø¯ ÙØªØ­ Ø§Ù„ØµÙØ­Ø©
 window.addEventListener('load', loadPosts);
 
-// ÃÍÏÇË ÇáÃÒÑÇÑ ÇáÃÎÑì (äİÓ ÇáßæÏ ÇáÓÇÈŞ)
+// Ø£Ø­Ø¯Ø§Ø« Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„Ø£Ø®Ø±Ù‰ (Ù†ÙØ³ Ø§Ù„ÙƒÙˆØ¯ Ø§Ù„Ø³Ø§Ø¨Ù‚)
 // ...
