@@ -3,16 +3,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000; /* ÎáİíÉ ÓæÏÇÁ */
-    color: #fff; /* äÕ ÃÈíÖ */
+    background-color: #000; /* Ø®Ù„ÙÙŠØ© Ø³ÙˆØ¯Ø§Ø¡ */
+    color: #fff; /* Ù†Øµ Ø£Ø¨ÙŠØ¶ */
 }
 
 header {
-    background: #1DA1F2; /* áæä ÃÒÑŞ ããíÒ */
+    background: #1DA1F2; /* Ù„ÙˆÙ† Ø£Ø²Ø±Ù‚ Ù…Ù…ÙŠØ² */
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* ÅÖÇİÉ Ùá */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ø¥Ø¶Ø§ÙØ© Ø¸Ù„ */
 }
 
 nav ul {
@@ -22,7 +22,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* ÊÛííÑ Åáì inline-block áÊÍÓíä ÇáÊÍßã */
+    display: inline-block; /* ØªØºÙŠÙŠØ± Ø¥Ù„Ù‰ inline-block Ù„ØªØ­Ø³ÙŠÙ† Ø§Ù„ØªØ­ÙƒÙ… */
     margin: 0 20px;
 }
 
@@ -30,21 +30,21 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s; /* ÊÃËíÑ ÇäÊŞÇáí */
+    transition: 0.3s; /* ØªØ£Ø«ÙŠØ± Ø§Ù†ØªÙ‚Ø§Ù„ÙŠ */
 }
 
 nav ul li a:hover {
-    opacity: 0.8; /* ÊÛãíÖ ÚäÏ ÇáÊãÑíÑ */
+    opacity: 0.8; /* ØªØºÙ…ÙŠØ¶ Ø¹Ù†Ø¯ Ø§Ù„ØªÙ…Ø±ÙŠØ± */
 }
 
 main {
     padding: 20px;
-    max-width: 800px; /* ÊÍÏíÏ ÚÑÖ ááãÍÊæì */
-    margin: 0 auto; /* ÊæÓíØ ÇáÃİŞí */
+    max-width: 800px; /* ØªØ­Ø¯ÙŠØ¯ Ø¹Ø±Ø¶ Ù„Ù„Ù…Ø­ØªÙˆÙ‰ */
+    margin: 0 auto; /* ØªÙˆØ³ÙŠØ· Ø§Ù„Ø£ÙÙ‚ÙŠ */
 }
 
 .post-form {
-    background: #1c1c1c; /* ÎáİíÉ ÑãÇÏíÉ ÏÇßäÉ */
+    background: #1c1c1c; /* Ø®Ù„ÙÙŠØ© Ø±Ù…Ø§Ø¯ÙŠØ© Ø¯Ø§ÙƒÙ†Ø© */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 25px;
@@ -52,7 +52,7 @@ main {
 
 .post-form h2 {
     margin-top: 0;
-    color: #1DA1F2; /* áæä ÃÒÑŞ ááÚäÇæíä */
+    color: #1DA1F2; /* Ù„ÙˆÙ† Ø£Ø²Ø±Ù‚ Ù„Ù„Ø¹Ù†Ø§ÙˆÙŠÙ† */
 }
 
 textarea {
@@ -60,11 +60,11 @@ textarea {
     height: 100px;
     background: #333;
     color: #fff;
-    border: 2px solid #1DA1F2; /* ÍÏ ÃÒÑŞ */
+    border: 2px solid #1DA1F2; /* Ø­Ø¯ Ø£Ø²Ø±Ù‚ */
     border-radius: 8px;
     padding: 12px;
     font-size: 16px;
-    resize: vertical; /* ÇáÓãÇÍ ÈÅÚÇÏÉ ÇáÍÌã ÑÃÓíğÇ İŞØ */
+    resize: vertical; /* Ø§Ù„Ø³Ù…Ø§Ø­ Ø¨Ø¥Ø¹Ø§Ø¯Ø© Ø§Ù„Ø­Ø¬Ù… Ø±Ø£Ø³ÙŠÙ‹Ø§ ÙÙ‚Ø· */
 }
 
 button {
@@ -73,15 +73,15 @@ button {
     color: #fff;
     border: none;
     padding: 12px 25px;
-    border-radius: 25px; /* ÍæÇİ ÏÇÆÑíÉ */
+    border-radius: 25px; /* Ø­ÙˆØ§Ù Ø¯Ø§Ø¦Ø±ÙŠØ© */
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #0d8bbf; /* áæä ÃÛãŞ ÚäÏ ÇáÊãÑíÑ */
-    transform: translateY(-2px); /* ÊÃËíÑ ÑİÚ Îİíİ */
+    background: #0d8bbf; /* Ù„ÙˆÙ† Ø£ØºÙ…Ù‚ Ø¹Ù†Ø¯ Ø§Ù„ØªÙ…Ø±ÙŠØ± */
+    transform: translateY(-2px); /* ØªØ£Ø«ÙŠØ± Ø±ÙØ¹ Ø®ÙÙŠÙ */
 }
 
 .posts {
@@ -100,7 +100,7 @@ button:hover {
     border-radius: 8px;
     padding: 15px;
     margin: 15px 0;
-    border-left: 4px solid #1DA1F2; /* ÎØ ÌÇäÈí ÃÒÑŞ */
+    border-left: 4px solid #1DA1F2; /* Ø®Ø· Ø¬Ø§Ù†Ø¨ÙŠ Ø£Ø²Ø±Ù‚ */
 }
 
 .post p {
@@ -112,7 +112,7 @@ button:hover {
 .post small {
     color: #888;
     font-size: 0.9em;
-    display: block; /* áÌÚá ÇáÊÇÑíÎ İí ÓØÑ ÌÏíÏ */
+    display: block; /* Ù„Ø¬Ø¹Ù„ Ø§Ù„ØªØ§Ø±ÙŠØ® ÙÙŠ Ø³Ø·Ø± Ø¬Ø¯ÙŠØ¯ */
 }
 
 footer {
